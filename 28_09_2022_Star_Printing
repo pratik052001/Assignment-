@@ -1,0 +1,53 @@
+import java.util.*;
+public class star {
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter the value of row");
+	int n=sc.nextInt(); //value of row get from user
+	System.out.println("\n This is 1,2 pattern :");
+	for(int i=1;i<=n;i++) {
+	
+		for(int j=1;j<=n-i;j++) { //this loop is use for space printing
+			System.out.print(" ");
+		}
+		for(int j=1;j<=i;j++) {
+			System.out.print(j);
+	
+		}
+		System.out.println(" ");
+	}
+	System.out.println("\n This is alphabetical pattern :");
+	char alp=64; //  ascii value
+	for(int i=1;i<=n;i++) {
+		for(int j=1;j<=i;j++) {
+			System.out.print((char)(alp+j)+""); //ascii value start from 65
+			
+		}
+
+		System.out.println(" ");
+	}
+	System.out.println("\n This is Tringular Star pattern :");
+	for(int i=1;i<=n;i++) {
+		for(int j=1;j<=n-i;j++) {
+			System.out.print(" ");
+		}
+		for(int j=1;j<=i;j++) {
+			System.out.print("* ");
+		}
+		System.out.println(" ");
+	}
+	System.out.println("\n This is 0,1 Pattern :");
+	for(int i=n;i>=1;i--) {
+		for(int j=1;j<=i;j++) {
+			if((i+j)%2==0) { // use for check addition of i and j is even
+				System.out.print("0");
+			}
+			else {
+				System.out.print("1");
+			}
+		}
+		System.out.println(" ");
+	}
+	
+}
+}
