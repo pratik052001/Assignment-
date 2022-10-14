@@ -1,0 +1,78 @@
+import java.util.*;
+class New{
+	Scanner sc=new Scanner(System.in);	
+	private int pass;
+	private int bal;
+	String name;
+	int id;
+	String bank_name;
+	int Total_bal;
+	public int getPass() {
+		return pass;
+	}
+	public void setPass(int pass) {
+		this.pass = pass;
+	}
+	public int getBal() {
+		return bal;
+	}
+	public void setBal(int bal) {
+		this.bal = bal;
+	}
+
+	void diaplay1() {
+		String s;	
+		do {
+		System.out.println("Press 1 for debit amount \n 2 to credit amount");
+		int n=sc.nextInt();
+		int D_am;
+		switch(n) {
+		case 1:
+			System.out.println("Enter how amount you want to debit");
+			D_am=sc.nextInt();
+			bal-=D_am;
+			break;
+		case 2:
+			System.out.println("Enter how amount you want to Credit");
+			D_am=sc.nextInt();
+			bal+=D_am;
+		    break;
+		}
+		System.out.println("Press 'Y' to repeat Process\n if you don't want repeat this process press any key");
+		s=sc.next();
+		n++;				
+	  }while(s=="Y"||s=="y");
+	System.out.println("Now Your Account Balance is :"+bal);
+	}
+	public int Display()
+	{   
+		System.out.println("Enter bank name:");
+		bank_name=sc.next();
+		System.out.println("Enter id :");
+		id=sc.nextInt();
+		System.out.println("Enter pass :");
+		pass=sc.nextInt();
+		System.out.println("Enter balance :");
+		bal=sc.nextInt();
+		System.out.println("Your current balance is :"+bal);
+		diaplay1();
+		return bal;
+		
+	}
+	void dis() {
+		System.out.println("Your Bank name is :"+bank_name);
+		System.out.println("Your id is :"+id);
+		System.out.println("Your password is :"+pass);
+	}
+}
+public class BankSystem extends New{
+	void Process() {
+		Display();
+		diaplay1();
+		dis();
+	}
+public static void main(String[] args) {
+	BankSystem b=new BankSystem();
+	b.Process();
+}
+}
