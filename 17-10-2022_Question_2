@@ -1,0 +1,42 @@
+public interface information {
+public void basic_info();
+public void Emp_info();
+}
+import java.util.*;
+abstract class Salary_calc
+{
+	abstract void calc_sal();
+}
+public class abstractDemo extends Salary_calc implements information{
+    Scanner sc=new Scanner(System.in); 
+	int Salary;	
+	public void basic_info() {}
+	public void Emp_info() {
+		int Emp_id=1;
+		String dep="Development Dept";
+		String des="Software Developer";
+		String location="Pune";
+		System.out.println("The Employee Detail :");
+		System.out.println("Emp id :"+Emp_id);
+		System.out.println("Department :"+dep);
+		System.out.println("Designation :"+des);
+		System.out.println("location :"+location);			
+	}
+
+	void calc_sal() {
+		System.out.println("Enter Salary :");
+		Salary=sc.nextInt();
+		double hra=Salary*8/100;
+		double Pf=Salary*20/100;
+		int da=Salary*5/100;
+		double Gross_Sal=Salary+hra+da+Pf;
+		System.out.println("The Gross Salary is :"+Gross_Sal);
+		double Net_Sal=Gross_Sal-Pf;
+		System.out.println("The Net Salary is :"+Net_Sal);
+	}
+ public static void main(String[] args) {
+	 abstractDemo a=new abstractDemo();
+	 a.Emp_info();
+	 a.calc_sal();
+}
+}
