@@ -1,0 +1,46 @@
+import java.util.*;
+public interface information {
+public void basic_info();
+public void Emp_info();
+}
+class Emp_basicInfo implements information
+{
+    Scanner sc=new Scanner(System.in);
+	@Override
+	public void basic_info() {
+	 String name="Rahul";
+	 int phno=91458582;
+	 String email="emp1@gmail.com";
+	 String add="pune";
+	 int DOB=05-07-1990;
+	 System.out.println("The name of Employee is "+name);
+	 System.out.println("MObile no is "+phno);
+	 System.out.println("Email :"+email);
+	 System.out.println("Adress: "+add);
+	}
+	public void Emp_info() {}
+}
+	class Emp_info implements information
+	{
+		public void basic_info() {}
+		public void Emp_info() {
+			int Emp_id=1;
+			String dep="Development Dept";
+			String des="Software Developer";
+			String location="Pune";
+			int Salary =30000;
+			System.out.println("The Employee Detail :");
+			System.out.println("Emp id :"+Emp_id);
+			System.out.println("Department :"+dep);
+			System.out.println("Designation :"+des);
+			System.out.println("location :"+location);		
+			System.out.println("Salary :"+Salary);
+		}		 
+}public class Meiin{
+	public static void main(String[] args) {
+		Emp_info n=new Emp_info();
+		Emp_basicInfo m=new Emp_basicInfo();
+		m.basic_info();
+		n.Emp_info();
+	}
+}
