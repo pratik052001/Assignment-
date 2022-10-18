@@ -1,4 +1,4 @@
-package Pratikv;
+
 import java.util.*;
 class access_p{
 	Scanner sc=new Scanner(System.in);
