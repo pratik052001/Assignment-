@@ -1,0 +1,25 @@
+import java.util.*;
+public class fibonathread extends Thread {
+Scanner a=new Scanner(System.in);
+void fibona() {
+	System.out.println("Enter the first number :");
+	int number=a.nextInt();//to get input from user
+	System.out.println("Enter the second number :");
+	int number1=a.nextInt();//to get input from user
+	int number2;
+	int count=10;
+	for(int i=2;i<count;i++)
+	{
+		number2=number+number1; //formula
+		System.out.println("the fibonacci series of given numberis "+number2);
+		number=number1; 
+		number1=number2; 
+	}
+}
+public static void main(String[] args) {
+	fibonathread f=new fibonathread();
+	fibonathread f1=new fibonathread();
+	f.start();
+	f1.start();
+}
+} 
