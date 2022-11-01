@@ -1,0 +1,35 @@
+public interface thred {
+	public void demo();
+}
+import java.util.*;
+class name extends Thread implements thred{
+	Scanner a=new Scanner(System.in);
+	public void demo() {
+		int number1=1;
+		int temp=number1;
+		int reminder,amstrong=0;
+		while(number1<1000) 
+		{
+			reminder=number1%10;
+			amstrong=amstrong+reminder*reminder*reminder;
+			number1=number1/10;
+			/* formula*/
+		}
+		if(temp==amstrong) 
+		{
+			System.out.println("The number is amstrong number :"+amstrong);
+		}
+		else {
+			System.out.println("The number is not amstrong :"+amstrong);
+		}
+
+	}
+}
+public class excep{
+		public static void main(String[] args) {
+			name n=new name();
+			name n1=new name();
+			n.start();
+			n1.start();
+		}
+}
